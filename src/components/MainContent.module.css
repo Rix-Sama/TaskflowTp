@@ -1,0 +1,92 @@
+/* MainContent.module.css */
+
+.main {
+  margin-left: 240px; /* Si sidebar est ouverte par défaut */
+  padding: 24px;
+  min-height: 100vh;
+  background-color: #f4f5f7; /* Fond gris clair style Trello */
+  margin-top: 56px; /* Pour compenser le header fixe */
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  min-height: calc(100vh - 80px);
+  align-items: flex-start;
+}
+
+.column {
+  min-width: 280px;
+  max-width: 280px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.colTitle {
+  margin: 0 0 16px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.card {
+  background-color: white;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e6e6;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: #1B8C3E;
+  background-color: #f9f9f9;
+}
+
+/* Scrollbar styling (optionnel) */
+.column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.column::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.column::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .column {
+    min-width: 260px;
+  }
+}

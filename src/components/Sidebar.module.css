@@ -1,0 +1,59 @@
+/* Sidebar.module.css */
+
+.sidebar {
+  width: 240px;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  background-color: #f5f5f5; /* Fond gris clair, ajustez selon votre design */
+  border-right: 1px solid #e0e0e0;
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+  position: fixed; /* Ou absolute selon votre layout */
+  left: 0;
+  top: 0;
+  overflow-y: auto; /* Scroll si contenu trop long */
+}
+
+.open {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.closed {
+  margin-left: -240px; /* Cache la sidebar en la décalant à gauche */
+  opacity: 0;
+}
+
+.title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 16px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.item:hover {
+  background-color: #e8e8e8; /* Effet hover gris plus foncé */
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: inline-block;
+}
