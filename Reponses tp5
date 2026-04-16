@@ -1,0 +1,8 @@
+➤ Q1 : Le script s’exécute-t-il ? Pourquoi ? Que fait React avec les strings dans le JSX ?
+
+Non il ne s'execute pas car React protege contre les XSS quand on utilise les strings dans le JSX
+
+➤ Q2 : Que se passe-t-il cette fois ? Supprimez ce code immédiatement après le test.
+
+Le code s'execute, Car DangerouslySetInnerHTML ouvre une porte dérobée qui désactive la protection XSS et injuste du HTML brut
+
